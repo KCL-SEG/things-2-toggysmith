@@ -21,10 +21,7 @@ class ThingForm(forms.ModelForm):
     )
 
     description = forms.Textarea(
-        validators=[MaxLengthValidator(
-            limit_value=120,
-            message="Name cannot be longer than 120 characters."
-        )]
+
     )
 
     quantity = forms.NumberInput(
