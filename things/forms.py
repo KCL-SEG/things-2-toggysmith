@@ -21,8 +21,6 @@ class ThingForm(forms.ModelForm):
     )
 
     description = forms.Textarea(
-        label="Description",
-        widget=forms.TextInput(),
         validators=[MaxLengthValidator(
             limit_value=120,
             message="Name cannot be longer than 120 characters."
