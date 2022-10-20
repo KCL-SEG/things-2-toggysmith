@@ -10,22 +10,3 @@ class ThingForm(forms.ModelForm):
         model = Thing
         fields = ["name", "description", "quantity"]
         widgets = {"description": forms.Textarea(), "quantity": forms.NumberInput()}
-
-    name = forms.CharField(
-        label="Name",
-        widget=forms.TextInput(),
-        validators=[MaxLengthValidator(
-            limit_value=35,
-            message="Name cannot be longer than 35 characters."
-        )]
-    )
-
-    description = forms.Textarea(
-
-    )
-
-    quantity = forms.NumberInput(
-        label="Name",
-        widget=forms.TextInput(),
-        validators=[MinValueValidator(0),MaxValueValidator(50)]
-    )
