@@ -2,6 +2,7 @@
 
 # Create your forms here.
 from django import forms
+from django.core.validators import MaxLengthValidator, MinValueValidator, MaxValueValidator
 from .models import Thing
 
 class ThingForm(forms.ModelForm):
